@@ -13,7 +13,8 @@ from telegram.ext import (
 )
 
 def load_token():
-    with open("/storage/emulated/0/pydroid3/token.txt", "r") as f:
+    import os
+TOKEN = os.getenv("BOT_TOKEN") as f:
         return f.read().strip()
 
 TOKEN = load_token()
